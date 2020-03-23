@@ -1,7 +1,0 @@
-// 
-// 
-// 
-
-#include "format check.h"
-
-
