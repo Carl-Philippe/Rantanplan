@@ -74,7 +74,10 @@ void loop()
 {
 	if((timer1 - timer5) >= 10000)
 	{
+  digitalWrite(SONDEVCC,HIGH);
+  delay(20);
 		taux_humidite = analogRead(HUM_PIN);	//Lis le taux d'humidite
+   digitalWrite(SONDEVCC,LOW);
 		timer5 = timer1;
 	}
 

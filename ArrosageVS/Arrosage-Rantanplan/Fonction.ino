@@ -179,12 +179,11 @@ pour une duree de TEMPS_ARROSAGE
 int arrosage(float* taux_humidite,long temps_arrosage,int relais,int* arrosages_consec,int sonde_vcc,int SONDEHUMIDITE,int* deja_arrose,int* selection)
 {
 
-	/*digitalWrite(sonde_vcc,HIGH);	//Envoie un courant a la sonde
-	delay(10);
-	*taux_humidite= dht.readHumidity();	//Lis le taux d'humidite
-	delay(10);
-	digitalWrite(sonde_vcc,LOW);	//Arrete le courant a la sonde
-	*/
+	digitalWrite(SONDEVCC,HIGH);
+  delay(20);
+   * taux_humidite = analogRead(HUM_PIN);  //Lis le taux d'humidite
+   digitalWrite(SONDEVCC,LOW);
+	
 		/* verification et d�collage de la ventilation si necessaire */
 
 	if(*taux_humidite <= arrosage_set && !isnan(*taux_humidite) && *deja_arrose==0)

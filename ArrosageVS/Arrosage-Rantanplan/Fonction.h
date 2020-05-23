@@ -4,8 +4,7 @@
 #define _FONCTION_h
 
 #include <LiquidCrystal.h>
-#include <DHT.h>
-#include <DHT_U.h>
+
 
  
 //Definition des connections hardware
